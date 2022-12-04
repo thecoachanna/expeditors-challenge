@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<style>
+    h1{
+        color:#17a2b8;
+        text-align: center;
+        
+    }
+    th{ 
+        color:#fff;
+            }
+</style>
+
+<body>
+  <h1>All Residents</h1>
+
+  <table class="table table-striped">
+
+    <tbody id="all-residents"></tbody>
+
+  </table>
+</body>
+
+<script>
+    var residents = [
+    {
+        first_name: "Dave",
+        last_name: "Smith",
+        street_address: "123 main st.",
+        city: "seattle",
+        state: "wa",
+        age: 43
+    },
+    {
+        first_name: "Alice",
+        last_name: "Smith",
+        street_address: "123 Main St.",
+        city: "Seattle",
+        state: "WA",
+        age: 45
+    },
+    {
+        first_name: "Bob",
+        last_name: "Williams",
+        street_address: "234 2nd Ave.",
+        city: "Tacoma",
+        state: "WA",
+        age: 26
+    },
+    {
+        first_name: "Carol",
+        last_name: "Johnson",
+        street_address: "234 2nd Ave",
+        city: "Seattle",
+        state: "WA",
+        age: 67
+    },
+    {
+        first_name: "Eve",
+        last_name: "Smith",
+        street_address: "234 2nd Ave.",
+        city: "Tacoma",
+        state: "WA",
+        age: 25
+    },
+    {
+        first_name: "Frank",
+        last_name: "Jones",
+        street_address: "234 2nd Ave.",
+        city: "Tacoma",
+        state: "FL",
+        age: 23
+    },
+    {
+        first_name: "George",
+        last_name: "Brown",
+        street_address: "345 3rd Blvd., Apt. 200",
+        city: "Seattle",
+        state: "WA",
+        age: 18
+    },
+    {
+        first_name: "Helen",
+        last_name: "Brown",
+        street_address: "345 3rd Blvd. Apt. 200",
+        city: "Seattle",
+        state: "WA",
+        age: 18
+    },
+    {
+        first_name: "Ian",
+        last_name: "Smith",
+        street_address: "123 main st ",
+        city: "Seattle",
+        state: "Wa",
+        age: 18
+    },
+    {
+        first_name: "Jane",
+        last_name: "Smith",
+        street_address: "123 Main St.",
+        city: "Seattle",
+        state: "WA",
+        age: 13
+    },
+]
+
+    
+
+    function displayAllResidents(resident) {
+        var display = document.getElementById("all-residents")
+
+        for (var i = 0; i < resident.length; i++) {
+            var row = `<tr>
+                    <td>${resident[i].first_name}<td>
+                    <td>${resident[i].last_name}<td>
+                    <td>${resident[i].street_address}<td>
+                    <td>${resident[i].city}<td>
+                    <td>${resident[i].state}<td>
+                    <td>${resident[i].age}<td>
+            
+            </tr>`
+            display.innerHTML += row
+        }
+    }
+
+    displayAllResidents(residents)
+
+</script>
+</html>
